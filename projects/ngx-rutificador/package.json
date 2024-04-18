@@ -1,6 +1,10 @@
 {
   "name": "ngx-rutificador",
-  "version": "1.0.1",
+  "version": "1.0.3",
+  "description": "Format rut",
+  "license": "MIT",
+  "repository": "sebastianchavez/ngx-rutificador",
+  "private": false,
   "peerDependencies": {
     "@angular/common": "^17.3.0",
     "@angular/core": "^17.3.0"
@@ -8,5 +12,9 @@
   "dependencies": {
     "tslib": "^2.3.0"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "keywords": [
+    "rut",
+    "rutificador"
+  ]
 }
