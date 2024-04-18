@@ -1,24 +1,42 @@
 # NgxRutificador
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+Angular Rutificador
 
-## Code scaffolding
 
-Run `ng generate component component-name --project ngx-rutificador` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-rutificador`.
-> Note: Don't forget to add `--project ngx-rutificador` or else it will be added to the default project in your `angular.json` file. 
+## Install
 
-## Build
+```
+npm i ngx-rutificador
+```
 
-Run `ng build ngx-rutificador` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Usage
 
-After building your library with `ng build ngx-rutificador`, go to the dist folder `cd dist/ngx-rutificador` and run `npm publish`.
+```
+import { NgxRutificadorModule } from 'ngx-rutificador'
 
-## Running unit tests
+@Component({
+  selector: 'app-root',
+  standalone: true,
+  imports: [NgxRutificadorModule],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss'
+})
+export class AppComponent {
+}
+```
 
-Run `ng test ngx-rutificador` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Further help
+## Pipe value format rut
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+```
+{{'123123123' | fotmatRut}}
+```
+
+
+## Directive input format
+
+```
+<input type="text" ngxRutificador>
+```
