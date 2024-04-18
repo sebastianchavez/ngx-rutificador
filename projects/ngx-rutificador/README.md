@@ -3,14 +3,14 @@
 Angular Rutificador
 
 
-## Install
+## Instalación
 
 ```
 npm i ngx-rutificador
 ```
 
 
-## Usage
+## Uso
 
 ```
 import { NgxRutificadorModule } from 'ngx-rutificador'
@@ -27,7 +27,7 @@ export class AppComponent {
 ```
 
 
-## Pipe value format rut
+## Pipe value formato rut
 
 
 ```
@@ -35,8 +35,32 @@ export class AppComponent {
 ```
 
 
-## Directive input format
+## Directive input formato rut
 
 ```
 <input type="text" ngxRutificador>
 ```
+
+
+## Component input validación rut
+
+Códiogo TS
+```
+export class AppComponent {
+  isValid: boolean = false;
+}
+```
+
+Código HTML
+```
+<input-rut (isValidRut)="isValid=$event" ></input-rut>
+{{isValid}}
+```
+
+
+## Propiedades
+| Nombre  | Descripción |
+| :------------ |:---------------|
+| placeholder      | Texto instructivo que se muestra antes de que la entrada tenga un valor. |
+| style      | Estilos de CSS |
+| class | Clase de CSS (declarada en style.css o style.scss) |

@@ -7,12 +7,13 @@ export class NgxRutificadorService {
 
   constructor() { }
 
-  validateRut(value: any) {
+  validateRut(params: string) {
+    let value = this.cleanRut(params)
     let sum = 0;
     let rut = value.substring(0, value.length - 1);
     let dv = value.substring(value.length - 1);
     if (dv.toUpperCase() == 'K') {
-      dv = 10
+      dv = '10'
     }
     let resultDv
     let arrRut = rut.split('')
@@ -23,12 +24,12 @@ export class NgxRutificadorService {
       let c = 0
       let arrResult: number[] = []
       var arrReverse = arrRut.reverse()
-      arrReverse.map((value: number, index: number) => {
+      arrReverse.map((value: string, index: number) => {
         if (index > 5) {
-          arrResult[b] = value * (2 + c)
+          arrResult[b] = Number(value) * (2 + c)
           c++
         } else {
-          arrResult[b] = value * (2 + b)
+          arrResult[b] = Number(value) * (2 + b)
         }
         b++
       })
@@ -39,7 +40,7 @@ export class NgxRutificadorService {
       if (resultDv > 9 && dv == "0") {
         return true
       }
-      if (resultDv == dv) {
+      if (resultDv == Number(dv)) {
         return true
       } else {
         return false
